@@ -18,8 +18,8 @@ public class HelloActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); //Do all the setup associated with the Activity class
         setContentView(R.layout.activity_hello); //Set our view to activity_pretty.xml
-        connectLayoutItems();
-        respondToEvents();
+        connectLayoutItems(); //Connect to the TextView and Button
+        respondToEvents(); //Set up a Listener for the Button
     }
 
     /*
@@ -66,28 +66,5 @@ public class HelloActivity extends Activity {
 
 
 
-    /*
-        Everything past this point can be ignored.
-        It is auto-generated code that comes with any class that extends the Activity class.
-        In fact, you can erase it if you want and nothing will happen - I kept it in here so that
-        your shell didn't have methods that mine didn't...
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.hello, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
